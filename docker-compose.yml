@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  enshrouded:
+    image: slymer29/gsh-enshrouded:latest
+    ports:
+      - "15636:15636/udp"
+      - "15637:15637/udp"
+    volumes:
+      - ./data/server:/opt/games/server
+      - ./data/config:/opt/games/config
+      - ./data/wine:/opt/wine
+      - ./data/steam:/opt/steam
